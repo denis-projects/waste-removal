@@ -1,8 +1,13 @@
 import { useState, FormEvent } from 'react';
 import { supabase, QuoteRequest } from '../lib/supabase';
 import { CheckCircle, AlertCircle, Loader, TrendingDown } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../lib/translations';
 
 export default function QuoteForm() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   const [formData, setFormData] = useState<QuoteRequest>({
     name: '',
     email: '',
@@ -46,7 +51,7 @@ export default function QuoteForm() {
       setTimeout(() => setStatus('idle'), 5000);
     } catch (error) {
       setStatus('error');
-      setErrorMessage('Failed to submit quote request. Please try again or call us directly.');
+      setErrorMessage(t.quote.error.message);
       console.error('Error submitting quote:', error);
     }
   };
@@ -59,19 +64,19 @@ export default function QuoteForm() {
   };
 
   return (
-    <section id="quote" className="py-16 sm:py-24 bg-gradient-to-br from-orange-50 to-gray-50">
+    <section id="quote" className="py-16 sm:py-24 bg-gradient-to-br from-blue-50 to-gray-50">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center space-x-2 bg-red-100 text-red-700 px-4 py-2 rounded-full font-semibold mb-4 animate-pulse">
             <TrendingDown className="h-5 w-5" />
-            <span>15% OFF for First-Time Customers - Limited Time!</span>
+            <span>{t.quote.discount}</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Get Your Free Quote
+            {t.quote.title}
           </h2>
           <p className="text-lg sm:text-xl text-gray-600">
-            Fill out the form below and receive a detailed quote within 2 hours. No commitment required.
+            {t.quote.subtitle}
           </p>
         </div>
 
@@ -79,8 +84,8 @@ export default function QuoteForm() {
           <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8 flex items-center space-x-3">
             <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0" />
             <div>
-              <h3 className="font-bold text-green-900">Quote Request Submitted!</h3>
-              <p className="text-green-700">We'll contact you within 2 hours with your personalized quote.</p>
+              <h3 className="font-bold text-green-900">{t.quote.success.title}</h3>
+              <p className="text-green-700">{t.quote.success.message}</p>
             </div>
           </div>
         )}
@@ -89,7 +94,7 @@ export default function QuoteForm() {
           <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-8 flex items-center space-x-3">
             <AlertCircle className="h-6 w-6 text-red-600 flex-shrink-0" />
             <div>
-              <h3 className="font-bold text-red-900">Submission Failed</h3>
+              <h3 className="font-bold text-red-900">{t.quote.error.title}</h3>
               <p className="text-red-700">{errorMessage}</p>
             </div>
           </div>
@@ -99,7 +104,7 @@ export default function QuoteForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
               <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                Full Name *
+                {t.quote.fields.name} *
               </label>
               <input
                 type="text"
@@ -108,14 +113,14 @@ export default function QuoteForm() {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                 placeholder="John Smith"
               />
             </div>
 
             <div>
               <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                Email Address *
+                {t.quote.fields.email} *
               </label>
               <input
                 type="email"
@@ -124,14 +129,14 @@ export default function QuoteForm() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                 placeholder="john@example.com"
               />
             </div>
 
             <div>
               <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                Phone Number *
+                {t.quote.fields.phone} *
               </label>
               <input
                 type="tel"
@@ -140,14 +145,14 @@ export default function QuoteForm() {
                 required
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                 placeholder="(555) 123-4567"
               />
             </div>
 
             <div>
               <label htmlFor="preferred_date" className="block text-sm font-semibold text-gray-700 mb-2">
-                Preferred Service Date
+                {t.quote.fields.date}
               </label>
               <input
                 type="date"
@@ -155,14 +160,14 @@ export default function QuoteForm() {
                 name="preferred_date"
                 value={formData.preferred_date}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
               />
             </div>
           </div>
 
           <div className="mb-6">
             <label htmlFor="address" className="block text-sm font-semibold text-gray-700 mb-2">
-              Service Location Address *
+              {t.quote.fields.address} *
             </label>
             <input
               type="text"
@@ -171,7 +176,7 @@ export default function QuoteForm() {
               required
               value={formData.address}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
               placeholder="123 Construction Site Rd, City, State 12345"
             />
           </div>
@@ -179,7 +184,7 @@ export default function QuoteForm() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div>
               <label htmlFor="project_type" className="block text-sm font-semibold text-gray-700 mb-2">
-                Project Type *
+                {t.quote.fields.projectType} *
               </label>
               <select
                 id="project_type"
@@ -187,20 +192,20 @@ export default function QuoteForm() {
                 required
                 value={formData.project_type}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
               >
                 <option value="">Select type</option>
-                <option value="residential">Residential</option>
-                <option value="commercial">Commercial</option>
-                <option value="industrial">Industrial</option>
-                <option value="demolition">Demolition</option>
-                <option value="renovation">Renovation</option>
+                <option value="residential">{t.quote.projectTypes.residential}</option>
+                <option value="commercial">{t.quote.projectTypes.commercial}</option>
+                <option value="industrial">{t.quote.projectTypes.industrial}</option>
+                <option value="demolition">{t.quote.projectTypes.demolition}</option>
+                <option value="renovation">{t.quote.projectTypes.renovation}</option>
               </select>
             </div>
 
             <div>
               <label htmlFor="debris_type" className="block text-sm font-semibold text-gray-700 mb-2">
-                Primary Debris Type *
+                {t.quote.fields.debrisType} *
               </label>
               <select
                 id="debris_type"
@@ -208,21 +213,21 @@ export default function QuoteForm() {
                 required
                 value={formData.debris_type}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
               >
                 <option value="">Select debris</option>
-                <option value="concrete">Concrete/Asphalt</option>
-                <option value="wood">Wood/Lumber</option>
-                <option value="drywall">Drywall/Sheetrock</option>
-                <option value="metal">Metal/Scrap</option>
-                <option value="roofing">Roofing Materials</option>
-                <option value="mixed">Mixed Debris</option>
+                <option value="concrete">{t.quote.debrisTypes.concrete}</option>
+                <option value="wood">{t.quote.debrisTypes.wood}</option>
+                <option value="drywall">{t.quote.debrisTypes.drywall}</option>
+                <option value="metal">{t.quote.debrisTypes.metal}</option>
+                <option value="roofing">{t.quote.debrisTypes.roofing}</option>
+                <option value="mixed">{t.quote.debrisTypes.mixed}</option>
               </select>
             </div>
 
             <div>
               <label htmlFor="estimated_volume" className="block text-sm font-semibold text-gray-700 mb-2">
-                Estimated Volume *
+                {t.quote.fields.volume} *
               </label>
               <select
                 id="estimated_volume"
@@ -230,20 +235,20 @@ export default function QuoteForm() {
                 required
                 value={formData.estimated_volume}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
               >
                 <option value="">Select volume</option>
-                <option value="small">Small (1-2 truck loads)</option>
-                <option value="medium">Medium (3-5 truck loads)</option>
-                <option value="large">Large (6-10 truck loads)</option>
-                <option value="xlarge">Extra Large (10+ loads)</option>
+                <option value="small">{t.quote.volumes.small}</option>
+                <option value="medium">{t.quote.volumes.medium}</option>
+                <option value="large">{t.quote.volumes.large}</option>
+                <option value="xlarge">{t.quote.volumes.xlarge}</option>
               </select>
             </div>
           </div>
 
           <div className="mb-8">
             <label htmlFor="additional_info" className="block text-sm font-semibold text-gray-700 mb-2">
-              Additional Information
+              {t.quote.fields.info}
             </label>
             <textarea
               id="additional_info"
@@ -251,7 +256,7 @@ export default function QuoteForm() {
               value={formData.additional_info}
               onChange={handleChange}
               rows={4}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
               placeholder="Tell us about site access, special requirements, or any other details..."
             ></textarea>
           </div>
@@ -259,7 +264,7 @@ export default function QuoteForm() {
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 rounded-lg text-lg transition transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg text-lg transition transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
           >
             {status === 'loading' ? (
               <>
@@ -267,17 +272,17 @@ export default function QuoteForm() {
                 <span>Submitting...</span>
               </>
             ) : (
-              <span>Get My Free Quote Now</span>
+              <span>{t.quote.fields.submit}</span>
             )}
           </button>
 
           <p className="text-center text-sm text-gray-600 mt-4">
-            🔒 Your information is secure and will never be shared
+            🔒 {t.quote.fields.privacy}
           </p>
         </form>
 
         <div className="mt-8 text-center">
-          <p className="text-gray-600 mb-4">Prefer to call? Speak with a debris removal specialist now:</p>
+          <p className="text-gray-600 mb-4">{t.quote.fields.orCall}</p>
           <a
             href="tel:+1234567890"
             className="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition"
