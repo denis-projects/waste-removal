@@ -3,10 +3,10 @@ export type Language = 'en' | 'sq';
 export const translations = {
   en: {
     header: {
-      title: 'ProHaul Debris',
+      title: 'Eco-Pastrim',
       subtitle: 'Professional Construction Waste Solutions',
-      phone: '(555) 123-4567',
-      email: 'info@prohauling.com',
+      phone: '+355 682042980',
+      email: 'info@eco-pastrim.com',
       discount: '15% OFF First-Time Customers - Limited Time!',
       services: 'Services',
       materials: 'Materials',
@@ -97,8 +97,8 @@ export const translations = {
       },
       insurance: {
         title: 'Fully Licensed & Insured',
-        description: '$2M liability insurance coverage. Licensed by state and local authorities. Your project is protected.',
-        stat: '$2M Coverage'
+        description: 'Liability insurance coverage. Licensed by state and local authorities. Your project is protected.',
+        stat: 'Coverage'
       },
       team: {
         title: 'Experienced Team',
@@ -197,24 +197,24 @@ export const translations = {
   },
   sq: {
     header: {
-      title: 'ProHaul Debris',
+      title: 'Eco-Pastrim',
       subtitle: 'Zgjidhjet Profesionale për Përpunimin e Mbetjeve të Ndërtimit',
-      phone: '(555) 123-4567',
-      email: 'info@prohauling.com',
+      phone: '+355 682042980',
+      email: 'info@eco-pastrim.com',
       discount: '15% ZBRITJE për Klientët e Parë Herë - Koha e Limituar!',
       services: 'Shërbimet',
       materials: 'Materialet',
       whyUs: 'Pse Ne',
-      getQuote: 'Merr Ofertë',
-      callNow: 'Thirrni Tani'
+      getQuote: 'Merr Ofertën',
+      callNow: 'Telefo Tani'
     },
     hero: {
-      badge: 'Shërbimi i Njëjtës Dite në Dispozicion',
+      badge: 'Shërbimi Ekspres në Dispozicion',
       title: 'Transportimi Profesional i Mbetjeve të Ndërtimit',
       description: 'Heqja e mbeturinave e shpejtë, e besueshme dhe e përballueshme për kontraktorët dhe ndërtuesit. Ne trajtojmë gjithçka nga mbetjet e shkatërrimit deri në heqjen e betonit.',
-      cta: 'Merri Ofertën Falas',
+      cta: 'Merrni Ofertën Falas',
       features: {
-        licensed: 'Me Lejëzim & Sigurim',
+        licensed: 'E Licensuar & Siguri',
         availability: 'Disponueshmëri 24/7',
         eco: 'Heqja Miqësore me Mjedisin'
       }
@@ -223,7 +223,7 @@ export const translations = {
       title: 'Shërbimet Tona',
       subtitle: 'Zgjidhje të plotë transportimi të mbetjeve për kontraktorë, ndërtues dhe profesionistë të ndërtimit',
       demolition: {
-        title: 'Heqja e Mbetjeve të Shkatërrimit',
+        title: 'Heqja e Mbetjeve',
         description: 'Heqja e plotë e mbetjeve të shkatërrimit duke përfshirë drywalls, dru, metal dhe materialet e përziera nga vendi juaj i punës.',
         features: ['Marrja në të njëjtën ditë', 'Çdo vëllim', 'Të gjitha materialet']
       },
@@ -272,12 +272,12 @@ export const translations = {
         category: 'Mbetjet Organike & Drunit',
         items: ['Dru i Patrajtuar', 'Dru i Trajtuar', 'Palet & Kutia', 'Mbetjet e Pemëve', 'Cungat', 'Mbeturinat e Oborrit']
       },
-      cta: 'Thirrni për Materialet Speciale',
+      cta: 'Telefononi për Materialet Speciale',
       notSure: 'Nuk Jeni Të Sigurt Nëse Mund ta Transportojmë?',
       notSureDesc: 'Na kontaktoni për një konsultim falas. Ne trajtojmë materialet specjale dhe mund të përshtatemi me kërkesat unike të projekteve.'
     },
     whyUs: {
-      title: 'Pse të Zgjidhni ProHaul Debris?',
+      title: 'Pse të Zgjidhni Eco-Pastrim?',
       subtitle: 'Ne nuk jemi thjesht një kompani tjetër transportimi. Ne jemi partneri juaj i ndërtimit, i përkushtuar në mbajtjen e projekteve tuaja sipas orarit dhe buxhetit.',
       speed: {
         title: 'Shërbim i Shpejtë & i Besueshëm',
@@ -287,12 +287,12 @@ export const translations = {
       pricing: {
         title: 'Çmime Transparente',
         description: 'Pa tarifa të fshehura ose kërcime. Merrni një ofertë të saktë paraprakisht dhe mbyllni çmimin tuaj. Zbritjet e vëllimit janë në dispozicion.',
-        stat: 'Deri në 20% Zbritje për Shumë'
+        stat: 'Deri në 20% Zbritje për volume te medha'
       },
       insurance: {
-        title: 'Me Lejëzim të Plotë & Sigurim',
-        description: 'Mbulim siguracioni përgjegjësie $2M. Me lejëzim nga autoritetet shtetërore dhe vendore. Projekti juaj është i mbrojtur.',
-        stat: 'Mbulim $2M'
+        title: 'E licensuar & E sigurte',
+        description: 'Mbulim siguracioni përgjegjësie. E licensuar nga autoritetet shtetërore dhe vendore. Projekti juaj është i mbrojtur.',
+        stat: 'Mbulim pergjegjsie'
       },
       team: {
         title: 'Ekip me Përvojë',
@@ -344,7 +344,7 @@ export const translations = {
         info: 'Informacioni Shtesë',
         submit: 'Merr Ofertën Falas Tani',
         privacy: 'Informacioni juaj është i sigurt dhe nuk do të ndahet kurrë',
-        orCall: 'Preferoni të thirrni? Flisni me një specialist të heqjes së mbeturinave tani:'
+        orCall: 'Preferoni të telefononi? Flisni me një specialist të heqjes së mbeturinave tani:'
       },
       projectTypes: {
         residential: 'Rezidencial',
@@ -373,7 +373,7 @@ export const translations = {
       },
       error: {
         title: 'Dorëzimi Dështoi',
-        message: 'Dështoi dorëzimi i kërkesës për ofertë. Ju lutemi provoni përsëri ose na thirrni drejtpërdrejt.'
+        message: 'Dështoi dorëzimi i kërkesës për ofertë. Ju lutemi provoni përsëri ose na telefononi drejtpërdrejt.'
       }
     },
     footer: {
@@ -383,10 +383,10 @@ export const translations = {
       hours: 'Oraret e Punës',
       hourText: 'Shërbimi i Emergjencës 24/7',
       hourDesc: 'në dispozicion për projekte urgjente',
-      copyright: '© 2024 ProHaul Debris Services. Të gjitha të drejtat e rezervuara.',
+      copyright: '© 2025 Eco-Pastrim Services. Të gjitha të drejtat e rezervuara.',
       privacy: 'Politika e Privatësisë',
       terms: 'Termat e Shërbimit',
-      licensing: 'Lejëzimi'
+      licensing: 'Lincensuar'
     }
   }
 };
