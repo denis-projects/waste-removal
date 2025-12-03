@@ -189,7 +189,7 @@ export const translations = {
       hours: 'Business Hours',
       hourText: '24/7 Emergency Service',
       hourDesc: 'Available for urgent projects',
-      copyright: '© 2024 ProHaul Debris Services. All rights reserved.',
+      copyright: '© 2025 Eco-pastrim Debris Services. All rights reserved.',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
       licensing: 'Licensing'

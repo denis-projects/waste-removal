@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="flex items-center space-x-2 mb-4">
               <Truck className="h-8 w-8 text-blue-600" />
               <div>
-                <h3 className="text-xl font-bold text-white">ProHaul Debris</h3>
+                <h3 className="text-xl font-bold text-white">Eco-Pastrim</h3>
               </div>
             </div>
             <p className="text-gray-400 leading-relaxed">
@@ -69,7 +69,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start space-x-2">
                 <MapPin className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                <div>123 Industrial Pkwy, Suite 100, Your City, ST 12345</div>
+                <div>Durres</div>
               </li>
             </ul>
           </div>
@@ -86,9 +86,8 @@ export default function Footer() {
               </li>
               <li className="mt-4">
                 <div className="text-sm">
-                  <div>Monday - Friday: 6:00 AM - 8:00 PM</div>
-                  <div>Saturday: 7:00 AM - 6:00 PM</div>
-                  <div>Sunday: 8:00 AM - 4:00 PM</div>
+                  <div>Monday - Saturday: 8:00 AM - 5:00 PM</div>
+                  <div>Sunday: 9:00 AM - 3:00 PM</div>
                 </div>
               </li>
             </ul>
