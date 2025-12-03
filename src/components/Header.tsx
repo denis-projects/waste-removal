@@ -18,7 +18,7 @@ export default function Header() {
           <div className="flex items-center space-x-2">
             <Truck className="h-8 w-8 text-blue-600" />
             <div>
-              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">ProHaul Debris</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Eco-Pastrim</h1>
               <p className="text-xs text-gray-600 hidden sm:block">{t.header.subtitle}</p>
             </div>
           </div>
