@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState } from 'react';
 import { CheckCircle, AlertCircle, Loader, TrendingDown } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../lib/translations';
@@ -34,20 +34,20 @@ export default function QuoteForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     setStatus('loading');
     setErrorMessage('');
 
     try {
       // Replace 'YOUR_ACCESS_KEY_HERE' with your actual Web3Forms access key
+      // Get it from: https://web3forms.com
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'YOUR_ACCESS_KEY_HERE', // Get this from web3forms.com
+          access_key: 'YOUR_ACCESS_KEY_HERE', // ⚠️ REPLACE THIS with your Web3Forms access key
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
@@ -57,7 +57,7 @@ export default function QuoteForm() {
           project_type: formData.project_type,
           preferred_date: formData.preferred_date,
           additional_info: formData.additional_info,
-          subject: 'New Quote Request from Construction Debris Removal',
+          subject: 'New Quote Request - Construction Debris Removal',
         }),
       });
 
@@ -132,7 +132,7 @@ export default function QuoteForm() {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-8 sm:p-12">
+        <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
               <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -226,7 +226,7 @@ export default function QuoteForm() {
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
               >
-                <option value="">Select type</option>
+                <option value="">{language === 'en' ? 'Select type' : 'Zgjidhni llojin'}</option>
                 <option value="residential">{t.quote.projectTypes.residential}</option>
                 <option value="commercial">{t.quote.projectTypes.commercial}</option>
                 <option value="industrial">{t.quote.projectTypes.industrial}</option>
@@ -247,7 +247,7 @@ export default function QuoteForm() {
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
               >
-                <option value="">Select debris</option>
+                <option value="">{language === 'en' ? 'Select debris' : 'Zgjidhni mbeturinat'}</option>
                 <option value="concrete">{t.quote.debrisTypes.concrete}</option>
                 <option value="wood">{t.quote.debrisTypes.wood}</option>
                 <option value="drywall">{t.quote.debrisTypes.drywall}</option>
@@ -269,7 +269,7 @@ export default function QuoteForm() {
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
               >
-                <option value="">Select volume</option>
+                <option value="">{language === 'en' ? 'Select volume' : 'Zgjidhni vëllimin'}</option>
                 <option value="small">{t.quote.volumes.small}</option>
                 <option value="medium">{t.quote.volumes.medium}</option>
                 <option value="large">{t.quote.volumes.large}</option>
@@ -289,12 +289,13 @@ export default function QuoteForm() {
               onChange={handleChange}
               rows={4}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-              placeholder="Tell us about site access, special requirements, or any other details..."
+              placeholder={language === 'en' ? 'Tell us about site access, special requirements, or any other details...' : 'Na tregoni për qasjen në vend, kërkesat e veçanta, ose ndonjë detaj tjetër...'}
             ></textarea>
           </div>
 
           <button
-            type="submit"
+            type="button"
+            onClick={handleSubmit}
             disabled={status === 'loading'}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg text-lg transition transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
           >
@@ -311,15 +312,15 @@ export default function QuoteForm() {
           <p className="text-center text-sm text-gray-600 mt-4">
             🔒 {t.quote.fields.privacy}
           </p>
-        </form>
+        </div>
 
         <div className="mt-8 text-center">
           <p className="text-gray-600 mb-4">{t.quote.fields.orCall}</p>
           <a
-            href="tel:+1234567890"
+            href="tel:+355682042980'"
             className="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition"
           >
-            📞 (555) 123-4567
+            📞 +355 682042980
           </a>
         </div>
       </div>
