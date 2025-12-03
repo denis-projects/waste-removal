@@ -50,7 +50,7 @@ export default function Header() {
               <option value="en">EN</option>
               <option value="sq">SQ</option>
             </select>
-            <a href="tel:+1234567890" className="text-blue-600">
+            <a href="tel:+355 682042980" className="text-blue-600">
               <Phone className="h-6 w-6" />
             </a>
             <button onClick={() => scrollToSection('quote')} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold">{t.header.getQuote}</button>

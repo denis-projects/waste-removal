@@ -46,7 +46,7 @@ export default function Hero() {
             </button>
 
             <a
-              href="tel:+1234567890"
+              href="tel:+355 682042980'"
               className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg flex items-center justify-center space-x-2 transition"
             >
               <span>{t.header.callNow}</span>

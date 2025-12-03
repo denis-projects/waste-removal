@@ -54,7 +54,7 @@ export default function Footer() {
               <li className="flex items-start space-x-2">
                 <Phone className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                 <div>
-                  <a href="tel:+1234567890" className="hover:text-blue-600 transition">
+                  <a href="tel:+355 682042980" className="hover:text-blue-600 transition">
                     {t.header.phone}
                   </a>
                 </div>

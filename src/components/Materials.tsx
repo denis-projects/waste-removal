@@ -58,7 +58,7 @@ export default function Materials() {
             {t.materials.notSureDesc}
           </p>
           <a
-            href="tel:+1234567890"
+            href="tel:+355 682042980"
             className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition"
           >
             {t.materials.cta}
