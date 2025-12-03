@@ -201,12 +201,12 @@ export const translations = {
       subtitle: 'Zgjidhjet Profesionale për Përpunimin e Mbetjeve të Ndërtimit',
       phone: '+355 682042980',
       email: 'info@eco-pastrim.com',
-      discount: '15% ZBRITJE për Klientët e Parë Herë - Koha e Limituar!',
+      discount: '15% ZBRITJE për Klientët e Rinj - Koha e Limituar!',
       services: 'Shërbimet',
       materials: 'Materialet',
       whyUs: 'Pse Ne',
       getQuote: 'Merr Ofertën',
-      callNow: 'Telefo Tani'
+      callNow: 'Telefono Tani'
     },
     hero: {
       badge: 'Shërbimi Ekspres në Dispozicion',
@@ -216,7 +216,7 @@ export const translations = {
       features: {
         licensed: 'E Licensuar & Siguri',
         availability: 'Disponueshmëri 24/7',
-        eco: 'Heqja Miqësore me Mjedisin'
+        eco: 'Pastrim Eco-Frindly'
       }
     },
     services: {
@@ -224,16 +224,16 @@ export const translations = {
       subtitle: 'Zgjidhje të plotë transportimi të mbetjeve për kontraktorë, ndërtues dhe profesionistë të ndërtimit',
       demolition: {
         title: 'Heqja e Mbetjeve',
-        description: 'Heqja e plotë e mbetjeve të shkatërrimit duke përfshirë drywalls, dru, metal dhe materialet e përziera nga vendi juaj i punës.',
+        description: 'Heqja e plotë e mbetjeve të shkatërrimit duke përfshirë inerte, dru, metal dhe materialet e përziera nga vendi juaj i punës.',
         features: ['Marrja në të njëjtën ditë', 'Çdo vëllim', 'Të gjitha materialet']
       },
       concrete: {
         title: 'Transportimi i Betonit & Asfaltit',
         description: 'Pajisje të specializuara për heqjen e rëndë të betonit, asfaltit, tullave dhe gurëve. Ne trajtojmë materialet më të forta.',
-        features: ['Pajisje të rëndë', 'Tretur & riçikluar', 'Cilësi tregtare']
+        features: ['Pajisje të rëndë', 'Tretur & riçikluar']
       },
       lumber: {
-        title: 'Mbetjet e Drutë & Drunit',
+        title: 'Mbetjet e Drunjtë',
         description: 'Heqja efikase e lëndës drusore të ndërtimit, palet, drurit të trajtuar dhe materialeve të mbetjeve organike.',
         features: ['Heqja miqësore me mjedisin', 'Opsionet e riçiklimit', 'Vende ndërtimi të pastra']
       },
@@ -243,9 +243,9 @@ export const translations = {
         features: ['Paguani për mbeturinat', 'Riçiklimi i sertifikuar', 'Në mënyrë të sigurt për mjedisin']
       },
       dumpster: {
-        title: 'Shërbim Qiraje Kontejner',
+        title: 'Shërbim Kontejneri me Qira',
         description: 'Kontejnerë me madhësi të ndryshme në dispozicion për projekte afatgjata. Periudha qiraje fleksibile për përshtatjen e orarit tuaj.',
-        features: ['Madhësi 10-40 javësh', 'Marrjet javore', 'Çmim i sheshtë']
+        features: ['Kohezgjatje 10-40 javësh', 'Marrjet javore', 'Çmim fleksibel']
       },
       cleanup: {
         title: 'Pastrimi i Plotë i Vend Punës',
@@ -258,7 +258,7 @@ export const translations = {
       subtitle: 'Ne trajtojmë praktikisht të gjitha llojet e mbeturinave të ndërtimit dhe materialeve. Nëse nuk e shihni të listuar, thjesht pyetni!',
       general: {
         category: 'Mbetjet Përgjithshme të Ndërtimit',
-        items: ['Drywall & Sheetrock', 'Dru & Dëndë', 'Tapiceri & Dysheme', 'Materialet e Çatisë', 'Izolim', 'Materialet e Paketimit']
+        items: ['Inerete', 'Dru', 'Tapiceri & Dysheme', 'Materialet e Çatisë', 'Izolim', 'Materialet e Paketimit']
       },
       heavy: {
         category: 'Materialet e Rëndë',
