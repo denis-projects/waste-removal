@@ -1,8 +1,19 @@
 import { useState, FormEvent } from 'react';
-import { supabase, QuoteRequest } from '../lib/supabase';
 import { CheckCircle, AlertCircle, Loader, TrendingDown } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../lib/translations';
+
+interface QuoteRequest {
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+  debris_type: string;
+  estimated_volume: string;
+  project_type: string;
+  preferred_date: string;
+  additional_info: string;
+}
 
 export default function QuoteForm() {
   const { language } = useLanguage();
@@ -29,26 +40,47 @@ export default function QuoteForm() {
     setErrorMessage('');
 
     try {
-      const { error } = await supabase
-        .from('quote_requests')
-        .insert([formData]);
-
-      if (error) throw error;
-
-      setStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        address: '',
-        debris_type: '',
-        estimated_volume: '',
-        project_type: '',
-        preferred_date: '',
-        additional_info: ''
+      // Replace 'YOUR_ACCESS_KEY_HERE' with your actual Web3Forms access key
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'YOUR_ACCESS_KEY_HERE', // Get this from web3forms.com
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          address: formData.address,
+          debris_type: formData.debris_type,
+          estimated_volume: formData.estimated_volume,
+          project_type: formData.project_type,
+          preferred_date: formData.preferred_date,
+          additional_info: formData.additional_info,
+          subject: 'New Quote Request from Construction Debris Removal',
+        }),
       });
 
-      setTimeout(() => setStatus('idle'), 5000);
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          address: '',
+          debris_type: '',
+          estimated_volume: '',
+          project_type: '',
+          preferred_date: '',
+          additional_info: ''
+        });
+
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       setStatus('error');
       setErrorMessage(t.quote.error.message);
