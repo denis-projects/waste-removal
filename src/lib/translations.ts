@@ -3,10 +3,10 @@ export type Language = 'en' | 'sq';
 export const translations = {
   en: {
     header: {
-      title: 'Eco-Pastrim',
+      title: 'GREY SKIP CO',
       subtitle: 'Professional Construction Waste Solutions',
-      phone: '+355 682042980',
-      email: 'info@eco-pastrim.com',
+      phone: '+355688077788',
+      email: 'greyskipco@hotmail.com',
       discount: '15% OFF First-Time Customers - Limited Time!',
       services: 'Services',
       materials: 'Materials',
@@ -189,7 +189,7 @@ export const translations = {
       hours: 'Business Hours',
       hourText: '24/7 Emergency Service',
       hourDesc: 'Available for urgent projects',
-      copyright: '© 2025 Eco-pastrim Debris Services. All rights reserved.',
+      copyright: '© 2025 GREY SKIP CO Debris Services. All rights reserved.',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
       licensing: 'Licensing'
@@ -197,10 +197,10 @@ export const translations = {
   },
   sq: {
     header: {
-      title: 'Eco-Pastrim',
+      title: 'GREY SKIP CO',
       subtitle: 'Zgjidhjet Profesionale për Përpunimin e Mbetjeve të Ndërtimit',
-      phone: '+355 682042980',
-      email: 'info@eco-pastrim.com',
+      phone: '+355688077788',
+      email: 'greyskipco@hotmail.com',
       discount: '15% ZBRITJE për Klientët e Rinj - Koha e Limituar!',
       services: 'Shërbimet',
       materials: 'Materialet',
@@ -277,7 +277,7 @@ export const translations = {
       notSureDesc: 'Na kontaktoni për një konsultim falas. Ne trajtojmë materialet specjale dhe mund të përshtatemi me kërkesat unike të projekteve.'
     },
     whyUs: {
-      title: 'Pse të Zgjidhni Eco-Pastrim?',
+      title: 'Pse të Zgjidhni GREY SKIP CO?',
       subtitle: 'Ne nuk jemi thjesht një kompani tjetër transportimi. Ne jemi partneri juaj i ndërtimit, i përkushtuar në mbajtjen e projekteve tuaja sipas orarit dhe buxhetit.',
       speed: {
         title: 'Shërbim i Shpejtë & i Besueshëm',
@@ -383,7 +383,7 @@ export const translations = {
       hours: 'Oraret e Punës',
       hourText: 'Shërbimi i Emergjencës 24/7',
       hourDesc: 'në dispozicion për projekte urgjente',
-      copyright: '© 2025 Eco-Pastrim Services. Të gjitha të drejtat e rezervuara.',
+      copyright: '© 2025 GREY SKIP CO Services. Të gjitha të drejtat e rezervuara.',
       privacy: 'Politika e Privatësisë',
       terms: 'Termat e Shërbimit',
       licensing: 'Lincensuar'

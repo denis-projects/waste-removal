@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="flex items-center space-x-2 mb-4">
               <Truck className="h-8 w-8 text-blue-600" />
               <div>
-                <h3 className="text-xl font-bold text-white">Eco-Pastrim</h3>
+                <h3 className="text-xl font-bold text-white">GREY SKIP CO</h3>
               </div>
             </div>
             <p className="text-gray-400 leading-relaxed">
@@ -54,7 +54,7 @@ export default function Footer() {
               <li className="flex items-start space-x-2">
                 <Phone className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                 <div>
-                  <a href="tel:+355 682042980" className="hover:text-blue-600 transition">
+                  <a href="tel:+355688077788" className="hover:text-blue-600 transition">
                     {t.header.phone}
                   </a>
                 </div>
@@ -62,7 +62,7 @@ export default function Footer() {
               <li className="flex items-start space-x-2">
                 <Mail className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                 <div>
-                  <a href="mailto:info@prohauling.com" className="hover:text-blue-600 transition">
+                  <a href="mailto:greyskipco@hotmail.com" className="hover:text-blue-600 transition">
                     {t.header.email}
                   </a>
                 </div>

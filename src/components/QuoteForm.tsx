@@ -317,10 +317,10 @@ export default function QuoteForm() {
         <div className="mt-8 text-center">
           <p className="text-gray-600 mb-4">{t.quote.fields.orCall}</p>
           <a
-            href="tel:+355682042980'"
+            href="tel:+355688077788"
             className="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition"
           >
-            📞 +355 682042980
+            📞 +355 688077788
           </a>
         </div>
       </div>

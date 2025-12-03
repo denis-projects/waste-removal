@@ -18,7 +18,7 @@ export default function Header() {
           <div className="flex items-center space-x-2">
             <Truck className="h-8 w-8 text-blue-600" />
             <div>
-              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Eco-Pastrim</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">GREY SKIP CO</h1>
               <p className="text-xs text-gray-600 hidden sm:block">{t.header.subtitle}</p>
             </div>
           </div>
@@ -48,9 +48,9 @@ export default function Header() {
               className="text-xs bg-gray-100 px-2 py-1 rounded"
             >
               <option value="en">EN</option>
-              <option value="sq">SQ</option>
+              <option value="sq">AL</option>
             </select>
-            <a href="tel:+355 682042980" className="text-blue-600">
+            <a href="tel:+355688077788" className="text-blue-600">
               <Phone className="h-6 w-6" />
             </a>
             <button onClick={() => scrollToSection('quote')} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold">{t.header.getQuote}</button>
