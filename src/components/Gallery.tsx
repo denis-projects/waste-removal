@@ -8,8 +8,6 @@ import Photo5 from '../assets/Photo5.jpeg'
 import Photo6 from '../assets/Photo6.jpeg'
 import Photo7 from '../assets/Photo7.jpeg'
 
-
-
 // Content specific to debris removal
 const galleryContent = {
   title: "Our Cleanup Projects",
@@ -72,7 +70,7 @@ export default function Gallery() {
   const prevSlide = () =>
     setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
 
-  const goToSlide = (index: number) => {
+  const goToSlide = (index) => {
     setIsAutoPlaying(false);
     setCurrentIndex(index);
   };
@@ -84,7 +82,7 @@ export default function Gallery() {
     return () => clearInterval(interval);
   }, [isAutoPlaying, currentIndex]);
 
-  const handleNav = (direction: "next" | "prev") => {
+  const handleNav = (direction) => {
     setIsAutoPlaying(false);
     direction === "next" ? nextSlide() : prevSlide();
   };
@@ -110,7 +108,7 @@ export default function Gallery() {
           <div className="relative overflow-hidden rounded-2xl shadow-2xl aspect-[16/9] bg-gray-800">
 
             {images.map((image, index) => {
-              const data = galleryContent.slides[image.key as keyof typeof galleryContent.slides];
+              const data = galleryContent.slides[image.key];
               const isActive = index === currentIndex;
               const isPrev = index === (currentIndex - 1 + totalSlides) % totalSlides;
               const isNext = index === (currentIndex + 1) % totalSlides;
@@ -133,30 +131,6 @@ export default function Gallery() {
                     alt={data.title}
                     className="w-full h-full object-cover"
                   />
-
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-
-                  {/* Text */}
-                  <div
-                    className={`absolute bottom-0 left-0 right-0 p-8 transition-all duration-700 ${isActive
-                      ? "translate-y-0 opacity-100"
-                      : "translate-y-8 opacity-0"
-                      }`}
-                  >
-                    <div className="max-w-xl">
-                      <div className="inline-block mb-4 px-4 py-1 bg-orange-500/90 text-white text-sm font-semibold rounded-full">
-                        Job {index + 1} of {totalSlides}
-                      </div>
-
-                      <h3 className="text-3xl font-bold text-white mb-2">
-                        {data.title}
-                      </h3>
-                      <p className="text-gray-200 text-lg">
-                        {data.desc}
-                      </p>
-                    </div>
-                  </div>
                 </div>
               );
             })}
@@ -197,10 +171,7 @@ export default function Gallery() {
           {/* Thumbnails */}
           <div className="hidden lg:flex justify-center gap-4 mt-8">
             {images.map((image, index) => {
-              const data =
-                galleryContent.slides[
-                image.key as keyof typeof galleryContent.slides
-                ];
+              const data = galleryContent.slides[image.key];
               return (
                 <button
                   key={index}
