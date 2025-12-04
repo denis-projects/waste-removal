@@ -23,7 +23,8 @@ const galleryContent = {
     site3: { title: "Yard Cleanup", desc: "Branches, leaves and green waste hauling" },
     site4: { title: "Renovation Waste", desc: "Drywall, wood, tiles and rubble removal" },
     site5: { title: "Garage Cleanout", desc: "Furniture and appliance disposal" },
-    site6: { title: "Commercial Cleanup", desc: "Office and warehouse debris removal" }
+    site6: { title: "Commercial Cleanup", desc: "Office and warehouse debris removal" },
+    site7: { title: "Commercial Cleanup", desc: "Office and warehouse debris removal" }
   }
 };
 
