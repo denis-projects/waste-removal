@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Photo from '../assets/Photo.jpeg'
+import Photo2 from '../assets/Photo2.jpeg'
+import Photo3 from '../assets/Photo3.jpeg'
+import Photo4 from '../assets/Photo4.jpeg'
+import Photo5 from '../assets/Photo5.jpeg'
+import Photo6 from '../assets/Photo6.jpeg'
+import Photo7 from '../assets/Photo7.jpeg'
+
+
 
 // Content specific to debris removal
 const galleryContent = {
@@ -25,28 +34,32 @@ export default function Gallery() {
   // Realistic debris-removal related photos
   const images = [
     {
-      url: "https://images.pexels.com/photos/2284220/pexels-photo-2284220.jpeg?auto=compress&cs=tinysrgb&w=800",
+      url: Photo,
       key: "site1"
     },
     {
-      url: "https://images.pexels.com/photos/2284220/pexels-photo-2284220.jpeg?auto=compress&cs=tinysrgb&w=800",
+      url: Photo2,
       key: "site2"
     },
     {
-      url: "https://images.pexels.com/photos/2284220/pexels-photo-2284220.jpeg?auto=compress&cs=tinysrgb&w=800",
+      url: Photo3,
       key: "site3"
     },
     {
-      url: "https://images.pexels.com/photos/2284220/pexels-photo-2284220.jpeg?auto=compress&cs=tinysrgb&w=800",
+      url: Photo4,
       key: "site4"
     },
     {
-      url: "https://images.pexels.com/photos/2284220/pexels-photo-2284220.jpeg?auto=compress&cs=tinysrgb&w=800",
+      url: Photo5,
       key: "site5"
     },
     {
-      url: "https://images.pexels.com/photos/2284220/pexels-photo-2284220.jpeg?auto=compress&cs=tinysrgb&w=800",
+      url: Photo6,
       key: "site6"
+    },
+    {
+      url: Photo7,
+      key: "site7"
     }
   ];
 
