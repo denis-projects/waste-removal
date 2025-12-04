@@ -1,4 +1,4 @@
-export type Language = 'en' | 'sq';
+export type Language = 'en' | 'sq' | 'it';
 
 export const translations = {
   en: {
@@ -387,6 +387,200 @@ export const translations = {
       privacy: 'Politika e Privatësisë',
       terms: 'Termat e Shërbimit',
       licensing: 'Lincensuar'
+    }
+  },
+  it: {
+    header: {
+      title: 'GREY SKIP CO',
+      subtitle: 'Soluzioni Professionali per lo Smaltimento dei Rifiuti da Costruzione',
+      phone: '+355688077788',
+      email: 'greyskipco@hotmail.com',
+      discount: '15% DI SCONTO per i Nuovi Clienti - Tempo Limitato!',
+      services: 'Servizi',
+      materials: 'Materiali',
+      whyUs: 'Perché Noi',
+      getQuote: 'Richiedi Preventivo',
+      callNow: 'Chiama Ora'
+    },
+    hero: {
+      badge: 'Servizio lo Stesso Giorno Disponibile',
+      title: 'Trasporto Professionale di Rifiuti da Demolizione',
+      description: 'Rimozione di rifiuti veloce, affidabile ed economica per appaltatori e costruttori. Gestiamo tutto dalle macerie di demolizione allo smaltimento del calcestruzzo.',
+      cta: 'Ottieni Preventivo Gratuito',
+      features: {
+        licensed: 'Autorizzati & Assicurati',
+        availability: 'Disponibilità 24/7',
+        eco: 'Smaltimento Ecologico'
+      }
+    },
+    services: {
+      title: 'I Nostri Servizi',
+      subtitle: 'Soluzioni complete di trasporto di rifiuti per appaltatori, costruttori e professionisti dell\'edilizia',
+      demolition: {
+        title: 'Rimozione Macerie di Demolizione',
+        description: 'Rimozione completa di rifiuti di demolizione inclusi cartongesso, legno, metallo e materiali misti dal vostro cantiere.',
+        features: ['Ritiro lo stesso giorno', 'Qualsiasi volume', 'Tutti i materiali']
+      },
+      concrete: {
+        title: 'Trasporto Calcestruzzo e Asfalto',
+        description: 'Attrezzature specializzate per la rimozione pesante di calcestruzzo, asfalto, mattoni e pietra. Gestiamo i materiali più difficili.',
+        features: ['Attrezzature pesanti', 'Frantumato e riciclato', 'Grado commerciale']
+      },
+      lumber: {
+        title: 'Rifiuti di Legname e Legno',
+        description: 'Rimozione efficiente di legname da costruzione, pallet, legno trattato e materiali di scarto organico.',
+        features: ['Smaltimento ecologico', 'Opzioni di riciclaggio', 'Cantieri puliti']
+      },
+      metal: {
+        title: 'Raccolta Rottami Metallici',
+        description: 'Raccogliamo e ricicliamo tutti i metalli ferrosi e non ferrosi, rame, alluminio e materiali in acciaio.',
+        features: ['Pagamento per i rottami', 'Riciclaggio certificato', 'Ambientalmente sicuro']
+      },
+      dumpster: {
+        title: 'Servizio di Noleggio Cassonetti',
+        description: 'Cassonetti di varie dimensioni disponibili per progetti a lungo termine. Periodi di noleggio flessibili per adattarsi ai vostri tempi.',
+        features: ['Dimensioni 10-40 iarde', 'Ritiri settimanali', 'Prezzo fisso']
+      },
+      cleanup: {
+        title: 'Pulizia Completa del Cantiere',
+        description: 'Servizio di pulizia post-costruzione completo. Lasciamo il vostro sito perfettamente pulito e pronto per la fase successiva.',
+        features: ['Pulizia finale', 'Servizio dettagliato', 'Rapido ritorno']
+      }
+    },
+    materials: {
+      title: 'Materiali che Accettiamo',
+      subtitle: 'Gestiamo praticamente tutti i tipi di rifiuti di costruzione e materiali. Se non lo vedete elencato, chiedete pure!',
+      general: {
+        category: 'Rifiuti Generali da Costruzione',
+        items: ['Cartongesso e Lastre', 'Legno e Legname', 'Moquette e Pavimenti', 'Materiali di Copertura', 'Isolamento', 'Materiali di Imballaggio']
+      },
+      heavy: {
+        category: 'Materiali Pesanti',
+        items: ['Calcestruzzo e Cemento', 'Asfalto', 'Mattoni e Muratura', 'Pietra e Roccia', 'Piastrelle e Porcellana', 'Terra e Terreno']
+      },
+      metal: {
+        category: 'Metalli e Materiali Riciclabili',
+        items: ['Acciaio e Ferro', 'Cavi di Rame', 'Alluminio', 'Ottone e Bronzo', 'Acciaio Inossidabile', 'Metalli Misti']
+      },
+      organic: {
+        category: 'Rifiuti Organici e di Legno',
+        items: ['Legname Non Trattato', 'Legno Trattato', 'Pallet e Casse', 'Rifiuti di Alberi', 'Ceppi', 'Rifiuti di Giardino']
+      },
+      cta: 'Chiama per Materiali Speciali',
+      notSure: 'Non Siete Sicuri Se Possiamo Trasportarlo?',
+      notSureDesc: 'Contattateci per una consulenza gratuita. Gestiamo materiali speciali e possiamo adattarci a esigenze di progetto uniche.'
+    },
+    whyUs: {
+      title: 'Perché Scegliere GREY SKIP CO?',
+      subtitle: 'Non siamo solo un\'altra azienda di trasporto. Siamo il vostro partner di costruzione, impegnati a mantenere i vostri progetti in programma e nel budget.',
+      speed: {
+        title: 'Servizio Veloce e Affidabile',
+        description: 'Servizio lo stesso giorno e il giorno successivo disponibile. Comprendiamo i tempi di costruzione e non rallentiamo mai il vostro progetto.',
+        stat: 'Tempo di Risposta 2 Ore'
+      },
+      pricing: {
+        title: 'Prezzi Trasparenti',
+        description: 'Nessuna commissione nascosta o sorprese. Ottenete un preventivo accurato in anticipo e bloccate il vostro prezzo. Sconti per volumi disponibili.',
+        stat: 'Fino al 20% di Sconto per Volumi Grandi'
+      },
+      insurance: {
+        title: 'Completamente Autorizzati e Assicurati',
+        description: 'Copertura assicurativa di responsabilità civile. Autorizzati dalle autorità statali e locali. Il vostro progetto è protetto.',
+        stat: 'Copertura Assicurativa'
+      },
+      team: {
+        title: 'Team Esperto',
+        description: 'Oltre 15 anni al servizio di appaltatori e costruttori. Il nostro team è addestrato, professionale e conosce i cantieri.',
+        stat: 'Oltre 15 Anni di Esperienza'
+      },
+      eco: {
+        title: 'Smaltimento Ecologico',
+        description: 'Ricicliamo fino al 70% dei materiali raccolti. Partenariato con impianti di riciclaggio certificati. Gestione responsabile dei rifiuti.',
+        stat: 'Tasso di Riciclaggio 70%'
+      },
+      trust: {
+        title: 'Fidato dai Professionisti',
+        description: 'Valutazione 4,9/5 stelle dai subappaltatori. Fornitore preferito dalle grandi aziende di costruzione. L\'eccellenza è il nostro standard.',
+        stat: 'Valutazione 4,9/5'
+      },
+      stats: {
+        projects: 'Progetti Completati',
+        availability: 'Disponibilità',
+        satisfaction: 'Tasso di Soddisfazione',
+        trucks: 'Camion in Flotta'
+      }
+    },
+    gallery: {
+      title: 'Il Nostro Lavoro in Azione',
+      subtitle: 'Guardate i nostri servizi professionali di trasporto di rifiuti in azione nei cantieri della regione',
+      cta: 'Inizia il Tuo Progetto Oggi',
+      site1: { title: 'Pulizia Cantiere', desc: 'Servizio completo di rimozione rifiuti' },
+      site2: { title: 'Attrezzature Pesanti', desc: 'Camion di trasporto specializzati' },
+      site3: { title: 'Progetti di Demolizione', desc: 'Rimozione rifiuti su larga scala' },
+      site4: { title: 'Progetti Commerciali', desc: 'Servizio di trasporto professionale' },
+      site5: { title: 'La Nostra Flotta', desc: '50+ camion pronti a servirvi' },
+      site6: { title: 'Servizi Residenziali', desc: 'Pulizia dopo ristrutturazione' },
+      testimonial: 'Unitevi a centinaia di appaltatori soddisfatti che si fidano di GREY SKIP CO'
+    },
+    quote: {
+      title: 'Ottieni il Tuo Preventivo Gratuito',
+      subtitle: 'Compilate il modulo sottostante e ricevete un preventivo dettagliato entro 2 ore. Nessun impegno richiesto.',
+      discount: '15% DI SCONTO per i Nuovi Clienti - Tempo Limitato!',
+      fields: {
+        name: 'Nome Completo',
+        email: 'Indirizzo Email',
+        phone: 'Numero di Telefono',
+        date: 'Data di Servizio Preferita',
+        address: 'Indirizzo Ubicazione Servizio',
+        projectType: 'Tipo di Progetto',
+        debrisType: 'Tipo Principale di Rifiuti',
+        volume: 'Volume Stimato',
+        info: 'Informazioni Aggiuntive',
+        submit: 'Ottieni il Mio Preventivo Gratuito Ora',
+        privacy: 'Le vostre informazioni sono sicure e non verranno mai condivise',
+        orCall: 'Preferite telefonare? Parlatene con uno specialista di rimozione rifiuti ora:'
+      },
+      projectTypes: {
+        residential: 'Residenziale',
+        commercial: 'Commerciale',
+        industrial: 'Industriale',
+        demolition: 'Demolizione',
+        renovation: 'Ristrutturazione'
+      },
+      debrisTypes: {
+        concrete: 'Calcestruzzo/Asfalto',
+        wood: 'Legno/Legname',
+        drywall: 'Cartongesso/Lastre',
+        metal: 'Metallo/Rottami',
+        roofing: 'Materiali di Copertura',
+        mixed: 'Rifiuti Misti'
+      },
+      volumes: {
+        small: 'Piccolo (1-2 carichi di camion)',
+        medium: 'Medio (3-5 carichi di camion)',
+        large: 'Grande (6-10 carichi di camion)',
+        xlarge: 'Extra Grande (10+ carichi)'
+      },
+      success: {
+        title: 'Richiesta di Preventivo Inviata!',
+        message: 'Vi contatteremo entro 2 ore con il vostro preventivo personalizzato.'
+      },
+      error: {
+        title: 'Invio Fallito',
+        message: 'Errore nell\'invio della richiesta di preventivo. Riprovate o chiamateci direttamente.'
+      }
+    },
+    footer: {
+      description: 'Servizi professionali di trasporto e smaltimento di rifiuti da costruzione. Autorizzati, assicurati e fidati dai subappaltatori.',
+      quickLinks: 'Collegamenti Rapidi',
+      contact: 'Informazioni di Contatto',
+      hours: 'Orari di Lavoro',
+      hourText: 'Servizio di Emergenza 24/7',
+      hourDesc: 'Disponibile per progetti urgenti',
+      copyright: '© 2025 GREY SKIP CO Services. Tutti i diritti riservati.',
+      privacy: 'Politica sulla Privacy',
+      terms: 'Condizioni di Servizio',
+      licensing: 'Licenze'
     }
   }
 };

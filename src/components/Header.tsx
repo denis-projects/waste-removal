@@ -40,11 +40,12 @@ export default function Header() {
               <Globe className="h-4 w-4 text-blue-200" />
               <select
                 value={language}
-                onChange={(e) => setLanguage(e.target.value as 'en' | 'sq')}
+                onChange={(e) => setLanguage(e.target.value as 'en' | 'sq' | 'it')}
                 className="text-sm bg-blue-700 text-white hover:bg-blue-600 px-3 py-1 rounded transition cursor-pointer border border-blue-600"
               >
-                <option value="en">English</option>
                 <option value="sq">Shqip</option>
+                <option value="en">English</option>
+                <option value="it">Italiano</option>
               </select>
             </div>
             <button onClick={() => scrollToSection('quote')} className="bg-white text-blue-900 px-6 py-2 rounded-lg hover:bg-blue-50 transition font-semibold shadow-md">{t.header.getQuote}</button>
@@ -53,11 +54,12 @@ export default function Header() {
           <div className="flex md:hidden items-center space-x-3">
             <select
               value={language}
-              onChange={(e) => setLanguage(e.target.value as 'en' | 'sq')}
+              onChange={(e) => setLanguage(e.target.value as 'en' | 'sq' | 'it')}
               className="text-xs bg-blue-700 text-white px-2 py-1 rounded border border-blue-600"
             >
-              <option value="en">EN</option>
               <option value="sq">AL</option>
+              <option value="en">EN</option>
+              <option value="it">IT</option>
             </select>
             <a href="tel:+355688077788" className="text-blue-200 hover:text-white transition">
               <Phone className="h-6 w-6" />
